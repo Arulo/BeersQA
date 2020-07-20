@@ -6,16 +6,43 @@ context('Pagination Component Tests', () => {
   })
 
   describe('When interacting with the pagination arrows', () => {
-    it('Should display arrow buttons depending on available previous or next pages', () => {
+
+    it('Should display one arrow button when on the first page', () => {
       cy.checkPaginationComponentIsDisplayed()
 
       cy.checkNumberOfPaginationArrows(1)
+
+    })
+
+    it('Should display two arrow buttons when on any of the middle pages', () => {
+      cy.checkPaginationComponentIsDisplayed()
+
       cy.clickPaginationButton(2)
       cy.checkNumberOfPaginationArrows(2)
+      cy.clickPaginationButton(3)
+      cy.checkNumberOfPaginationArrows(2)
+      cy.clickPaginationButton(4)
+      cy.checkNumberOfPaginationArrows(2)
+      cy.clickPaginationButton(5)
+      cy.checkNumberOfPaginationArrows(2)
+      cy.clickPaginationButton(6)
+      cy.checkNumberOfPaginationArrows(2)
+      cy.clickPaginationButton(7)
+      cy.checkNumberOfPaginationArrows(2)
+      cy.clickPaginationButton(8)
+      cy.checkNumberOfPaginationArrows(2)
+
+    })
+
+    it('Should display one arrow button when on the last page', () => {
+      cy.checkPaginationComponentIsDisplayed()
 
       cy.clickPaginationButton(9)
       cy.checkNumberOfPaginationArrows(1)
+
     })
+
+    
 
   })
 
