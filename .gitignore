@@ -7,3 +7,5 @@ coverage/
 .vscode/
 .env
 package-lock.json
+videos/
+yarn.lock
