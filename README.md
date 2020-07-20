@@ -33,8 +33,9 @@ export const getBeersByBrewedFromTo = ({ beers = [], brewedFrom, brewedTo })
 
 ## Test
 
-- Make sure you have the Redux Dev Tools Chrome Extension installed otherwise the app wouldn't run: (https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es)
-- 
+- Make sure you have the Redux Dev Tools Chrome Extension installed otherwise the app wouldn't run: `(https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?)hl=es)`
+- run `npm run cypress:open`
+- You will have to manually install the Redux Dev Tools on the Cypress Chrome instance too, otherwise the site won't load either.
 
 ## Design
 
