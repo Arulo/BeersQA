@@ -33,7 +33,7 @@ export const getBeersByBrewedFromTo = ({ beers = [], brewedFrom, brewedTo })
 
 ## Test
 
-- to be defined
+- Make sure you have the Redux Dev Tools Chrome Extension installed otherwise the app wouldn't run: (https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es)
 
 ## Design
 
