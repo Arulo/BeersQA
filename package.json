@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "format": "prettier \"src/**/*.{js,html}\" --write"
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run"
   },
   "keywords": [],
   "author": "Marc Romo",
@@ -15,6 +17,7 @@
     "@testing-library/react": "^10.0.2",
     "@testing-library/react-hooks": "^3.2.1",
     "cross-fetch": "^3.0.4",
+    "cypress": "^4.10.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint-plugin-prettier": "^3.1.3",
