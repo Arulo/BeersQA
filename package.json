@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "format": "prettier \"src/**/*.{js,html}\" --write",
-    "cypress:open": "./node_modules/.bin/cypress run"
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run"
   },
   "keywords": [],
   "author": "Marc Romo",
