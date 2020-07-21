@@ -18,6 +18,8 @@ import './commands'
 
 //Import page object files containing selectors and functions
 import './pageobjects/pagination'
+import './pageobjects/beerCards'
+import './pageobjects/calendar'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

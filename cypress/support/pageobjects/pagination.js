@@ -8,7 +8,7 @@ Cypress.Commands.add("checkPaginationComponentIsDisplayed", () => {
    cy.get(ELEMENTS.PAGINATION_CONTAINER).should("be.visible")
 })
 
-Cypress.Commands.add("checkNumberOfPaginationArrows", (arrowNumber) => {
+Cypress.Commands.add("checkNumberOfPaginationArrowsIs", (arrowNumber) => {
    cy.get(ELEMENTS.PAGINATION_ARROWS).should('have.length', arrowNumber)
 })
 
@@ -22,5 +22,6 @@ Cypress.Commands.add("checkPaginationButtonIsNotDisplayed", (buttonNumber) => {
 
 Cypress.Commands.add("clickPaginationButton", (buttonNumber) => {
     cy.checkPaginationButtonIsDisplayed(buttonNumber).click();
+    cy.get(`${ELEMENTS.PAGINATION_BUTTON}${buttonNumber} label`).should("have.class", 'selected')
 })
 
