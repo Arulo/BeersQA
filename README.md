@@ -45,6 +45,13 @@ I checked the following articles:
 
 With more time I would have probably found a way to make this work, but for the sake of completing the exercise in a timely manner I'd say install the plugin manually on the Cypress Chrome instance.
 
+UPDATE:
+
+By following the instructions here:   
+- `https://www.cypress.io/blog/2020/01/07/how-to-load-the-react-devtools-extension-in-cypress/`
+
+I managed to pick up the extension from my local repo instead of having to manually install it.
+
 ### Running the tests
 
 - run `npm run dev & npm run cypress:open` this will have the web server running at the same time as the Cypress UI opens and you can run the tests.
