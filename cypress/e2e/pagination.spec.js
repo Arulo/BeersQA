@@ -3,6 +3,7 @@
 context('Pagination Component Tests', () => {
   beforeEach(() => {
     cy.visit('')
+    cy.checkSiteIsUp()
   })
 
   describe('When interacting with the pagination arrows', () => {
@@ -10,39 +11,27 @@ context('Pagination Component Tests', () => {
     it('Should display one arrow button when on the first page', () => {
       cy.checkPaginationComponentIsDisplayed()
 
-      cy.checkNumberOfPaginationArrows(1)
+      cy.checkNumberOfPaginationArrowsIs(1)
 
     })
 
     it('Should display two arrow buttons when on any of the middle pages', () => {
       cy.checkPaginationComponentIsDisplayed()
+      let pagenum = 2
+      for (pagenum = 2; pagenum <= 8 ; pagenum++) {
+        cy.clickPaginationButton(pagenum)
 
-      cy.clickPaginationButton(2)
-      cy.checkNumberOfPaginationArrows(2)
-      cy.clickPaginationButton(3)
-      cy.checkNumberOfPaginationArrows(2)
-      cy.clickPaginationButton(4)
-      cy.checkNumberOfPaginationArrows(2)
-      cy.clickPaginationButton(5)
-      cy.checkNumberOfPaginationArrows(2)
-      cy.clickPaginationButton(6)
-      cy.checkNumberOfPaginationArrows(2)
-      cy.clickPaginationButton(7)
-      cy.checkNumberOfPaginationArrows(2)
-      cy.clickPaginationButton(8)
-      cy.checkNumberOfPaginationArrows(2)
-
+        cy.checkNumberOfPaginationArrowsIs(2)
+      }
     })
 
     it('Should display one arrow button when on the last page', () => {
       cy.checkPaginationComponentIsDisplayed()
 
       cy.clickPaginationButton(9)
-      cy.checkNumberOfPaginationArrows(1)
+      cy.checkNumberOfPaginationArrowsIs(1)
 
     })
-
-    
 
   })
 
