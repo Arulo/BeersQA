@@ -33,9 +33,35 @@ export const getBeersByBrewedFromTo = ({ beers = [], brewedFrom, brewedTo })
 
 ## Test
 
-- Make sure you have the Redux Dev Tools Chrome Extension installed otherwise the app wouldn't run: `(https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?)hl=es)`
-- run `npm run cypress:open`
+- Make sure you have the Redux Dev Tools Chrome Extension `(https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?)hl=es)` installed otherwise the app wouldn't run when hitting `localhost:1234`  
+
 - You will have to manually install the Redux Dev Tools on the Cypress Chrome instance too, otherwise the site won't load either.
+
+- I tried installing a package to sort this out, but given I'm on Windows that solution wouldn't work on different computers:
+I checked the following articles:
+
+  - `https://selleo.com/til/posts/rvajzbhbww-loading-react-redux-dev-tools-in-cypress`
+  - `https://www.cypress.io/blog/2020/01/07/how-to-load-the-react-devtools-extension-in-cypress/`
+
+With more time I would have probably found a way to make this work, but for the sake of completing the exercise in a timely manner I'd say install the plugin manually on the Cypress Chrome instance.
+
+### Running the tests
+
+- run `npm run dev & npm run cypress:open` this will have the web server running at the same time as the Cypress UI opens and you can run the tests.
+
+NOTE: Headless mode won't work because it won't have the Redux Dev Tools and the tests will fail
+
+### Approach
+
+I chose to use a Page Object Model kind of approach as we had discussed the benefits of it during the interview.
+
+The way I did this was to create a file per component in the pageobjects folder and imported them into support/index.js
+
+ `(calendar.js, beerCards.js, pagination.js)` 
+
+and I added the different relevant selectors and contextually relevant functions in said files. Notice that any spec file will have access to all page objects which is not ideal, but it can be useful if you wish to write more integration-style-tests.me I would have probably found a way to make this work, but for the sake of completing the exercise in a timely manner I'd say install the plugin on the Cypress Chrome instance.
+
+Under the e2e folder you will find the 3 Spec files matching the previously mentioned Page Object files
 
 ## Design
 

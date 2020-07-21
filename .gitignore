@@ -8,4 +8,5 @@ coverage/
 .env
 package-lock.json
 videos/
+screenshots/
 yarn.lock

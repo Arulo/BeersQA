@@ -17,6 +17,7 @@ Cypress.Commands.add("checkNumberOfBeerCardsIs", (numberOfCards) => {
 })
 
 Cypress.Commands.add("checkBeerCardsAreDisplayingCorrectly", (numberOfCards) => {
+    //Checks each matching element contains a set of sub-elements
     cy.get(ELEMENTS.BEER_CARD).each(() => {
         cy.get(ELEMENTS.BEER_IMAGE).should("be.visible");
         cy.get(ELEMENTS.BEER_NAME).should("be.visible");
